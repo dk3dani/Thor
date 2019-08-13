@@ -25,8 +25,8 @@ Após isso, terá uma pasta chamada `Thor` no diretório atual. Adentre a mesma 
 - `cp .env.example .env`;
 - `php artisan key:generate`;
 - Dentro do diretório `~/app/database/`, crie o arquivo `database.sqlite`;
-- Novamente no diretório na pasta raiz do projeto, execute `php artisan migrate`.
--npm install
+- Novamente no diretório na pasta raiz do projeto, execute `php artisan migrate`;
+- npm install.
 
 
 Após isso, o projeto já estará em condições de ser executado: `php artisan serve` e `npm run watch`.
