@@ -8,8 +8,8 @@
 	<modallink tipo="button" nome="meumodal" titulo="Criar" css=""></modallink>
 		<table-list 
 		v-bind:titulos="['#','Titulo','Descrição']"
-		v-bind:itens="[['1','php','curso de app'],['2','vue','curso de web']]"
-		criar="#criar"  detalhe="#detalhe" editar="#editar"  deletar="#deletar" token="4534534534" ordem="Asc" ordemCol="2"
+		v-bind:itens="[['1','Do mil ao milhão','Livro do Thiago Nigro'],['2','Segredo da mente milionaria','Livro do T.Harv']]"
+		criar="#criar"  detalhe="#detalhe" editar="#editar"  deletar="#deletar" token="4534534534" ordem="Desc" ordemCol="2"
 		
 		></table-list>
 		
@@ -19,27 +19,21 @@
 
 </page>
 <modal nome="meumodal">
-	<form>
-		<div class="form-group">
-		  <label for="exampleInputEmail1">Email address</label>
-		  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-		</div>
-		<div class="form-group">
-		  <label for="exampleInputPassword1">Password</label>
-		  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-		</div>
-		<div class="form-group">
-		  <label for="exampleInputFile">File input</label>
-		  <input type="file" id="exampleInputFile">
-		  <p class="help-block">Example block-level help text here.</p>
-		</div>
-		<div class="checkbox">
-		  <label>
-			<input type="checkbox"> Check me out
-		  </label>
-		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
-	  </form>
+	<panel titulo="Adicionar">
+		<formulario css="" action="#" method="post" enctype="multipart/form-data" token="7777">
+				<div class="form-group">
+						<label for="titulo">Titulo</label>
+						<input type="text" class="form-control" id="titulo" placeholder="Titulo">
+					  </div>
+					  <div class="form-group">
+							<label for="descricao">Descrição</label>
+							<input type="text" class="form-control" id="descricao" placeholder="Descrição">
+						  </div>
+					  <button class="btn btn-primary" type="submit">Adicionar</button>
+
+		</formulario>
+
+	</panel>
 
 </modal>
 @endsection

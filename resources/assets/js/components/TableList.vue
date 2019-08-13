@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="form-inline">
-      <a v-if="criar" v-bind:href="criar">Criar</a>
+     
       <div class="form-group pull-right">
         <input type="search" class="form-control" placeholder="Buscar" v-model="buscar" />
 
