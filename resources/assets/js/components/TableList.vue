@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="form-inline">
+     
       <a v-if="criar && !modal" v-bind:href="criar">Criar</a>
 
       <modallink  v-if="criar && modal" tipo="button" nome="meumodal" titulo="Criar" css=""></modallink>
@@ -79,6 +80,9 @@ export default {
   },
   computed: {
     lista: function() {
+
+
+
 let ordem=this.ordemAux;
 let ordemCol= this.ordemAuxCol;
 ordem = ordem.toLowerCase();
