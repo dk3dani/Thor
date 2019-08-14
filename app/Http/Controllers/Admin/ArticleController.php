@@ -20,8 +20,13 @@ class ArticleController extends Controller
         ["titulo"=>"Lista de Artigos","url"=>""]
 
      ]);
+     //refatoração da table
+     $listaDados=json_encode( [
+        ["id"=>1,"titulo"=>"olá","descricao"=>" apenas um olá"],
+        ["id"=>2,"titulo"=>"olá 2","descricao"=>" apenas um olá2"]
+     ]);
 
-   return view('admin.articles.index',compact('listaMigalhas'));
+   return view('admin.articles.index',compact('listaMigalhas','listaDados'));
     }
 
     /**
