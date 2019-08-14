@@ -42,11 +42,11 @@
 			<formulario css="" action="#" method="post" enctype="multipart/form-data" token="7777">
 					<div class="form-group">
 							<label for="titulo">Titulo</label>
-							<input type="text" class="form-control" id="titulo" placeholder="Titulo">
+							<input type="text" v-model="$store.state.item.titulo" class="form-control" id="titulo" placeholder="Titulo">
 						  </div>
 						  <div class="form-group">
 								<label for="descricao">Descrição</label>
-								<input type="text" class="form-control" id="descricao" placeholder="Descrição">
+								<input type="text" v-model="$store.state.item.descricao"  class="form-control" id="descricao" placeholder="Descrição">
 							  </div>
 						  <button class="btn btn-primary" type="submit">Editar</button>
 	
@@ -55,4 +55,9 @@
 		</panel>
 	
 	</modal>
+	<modal nome="detalhe">
+		<panel v-bind:titulo="$store.state.item.titulo">
+		  <p>@{{$store.state.item.descricao}}</p>
+		</panel>
+	  </modal>
 @endsection
