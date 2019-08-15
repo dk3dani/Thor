@@ -19,9 +19,9 @@
 
 
 </page>
-<modal nome="meumodal">
-	<panel titulo="Adicionar">
-		<formulario css="" action="#" method="post" enctype="multipart/form-data" token="7777">
+<modal nome="meumodal" titulo="Adicionar">
+{{-- tem que dar um id ao form para relacionar ao button que esta no slot  --}}
+		<formulario id="formadd" css="" action="#" method="post" enctype="multipart/form-data" token="7777">
 				<div class="form-group">
 						<label for="titulo">Titulo</label>
 						<input type="text" class="form-control" id="titulo" placeholder="Titulo">
@@ -30,16 +30,19 @@
 							<label for="descricao">Descrição</label>
 							<input type="text" class="form-control" id="descricao" placeholder="Descrição">
 						  </div>
-					  <button class="btn btn-primary" type="submit">Adicionar</button>
+					  
 
 		</formulario>
+		{{-- button no slot deve receber o form com o id  --}}
+	 <span slot="addbutton">
+		 <button form="formadd" class="btn btn-primary" type="submit">Adicionar</button>
+	</span>
 
-	</panel>
 
 </modal>
-<modal nome="editar">
-		<panel titulo="Editar">
-			<formulario css="" action="#" method="post" enctype="multipart/form-data" token="7777">
+<modal nome="editar" titulo="Editar">
+		
+			<formulario  id="formedit" css="" action="#" method="post" enctype="multipart/form-data" token="7777">
 					<div class="form-group">
 							<label for="titulo">Titulo</label>
 							<input type="text" v-model="$store.state.item.titulo" class="form-control" id="titulo" placeholder="Titulo">
@@ -48,11 +51,12 @@
 								<label for="descricao">Descrição</label>
 								<input type="text" v-model="$store.state.item.descricao"  class="form-control" id="descricao" placeholder="Descrição">
 							  </div>
-						  <button class="btn btn-primary" type="submit">Editar</button>
+						  
 	
 			</formulario>
-	
-		</panel>
+	    <span slot="addbutton">
+		 <button form="formedit" class="btn btn-primary" type="submit">Editar</button>
+		</span>
 	
 	</modal>
 	<modal nome="detalhe">
