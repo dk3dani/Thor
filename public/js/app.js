@@ -1435,7 +1435,12 @@ Vue.component('formulario', __webpack_require__(72));
 // acesso global no sistema 
 var app = new Vue({
     el: '#app',
-    store: store
+    store: store,
+    mounted: function mounted() {
+        console.log("okey");
+        //para evitar os atrasos de carregamento na tela e mostrar a tela ja montada
+        document.getElementById("app").style.display = "block";
+    }
 });
 
 /***/ }),

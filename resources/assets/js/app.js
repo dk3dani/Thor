@@ -42,5 +42,11 @@ Vue.component('formulario', require('./components/Formulario.vue'));
 // acesso global no sistema 
 const app = new Vue({
     el: '#app',
-    store
+    store,
+    mounted: function() {
+        console.log("okey");
+        //para evitar os atrasos de carregamento na tela e mostrar a tela ja montada
+        document.getElementById("app").style.display = "block";
+        
+    },
 });

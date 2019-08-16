@@ -59,7 +59,7 @@
 		</span>
 	
 	</modal>
-	<modal nome="detalhe">
+	<modal nome="detalhe" titulo="Detalhe">
 		<panel v-bind:titulo="$store.state.item.titulo">
 		  <p>@{{$store.state.item.descricao}}</p>
 		</panel>
